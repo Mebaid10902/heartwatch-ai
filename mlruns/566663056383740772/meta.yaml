@@ -1,0 +1,6 @@
+artifact_location: file:///C:/Users/Mebai/Downloads/fastapi-heart-ml-devops/mlruns/566663056383740772
+creation_time: 1752224135371
+experiment_id: '566663056383740772'
+last_update_time: 1752224135371
+lifecycle_stage: active
+name: heart_disease_prediction

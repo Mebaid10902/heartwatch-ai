@@ -1,0 +1,26 @@
+artifact_path: file:///C:/Users/Mebai/Downloads/fastapi-heart-ml-devops/mlruns/566663056383740772/models/m-a3cc73f5345a43699adc177ddf2720e6/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.0
+mlflow_version: 3.1.1
+model_id: m-a3cc73f5345a43699adc177ddf2720e6
+model_size_bytes: 3979695
+model_uuid: m-a3cc73f5345a43699adc177ddf2720e6
+prompts: null
+run_id: 5b99139ef442476491356ec3eaac3c17
+saved_input_example_info:
+  artifact_path: input_example.json
+  serving_input_path: serving_input_example.json
+  type: json_object
+utc_time_created: '2025-07-11 08:58:35.261845'

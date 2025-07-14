@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/Mebai/Downloads/fastapi-heart-ml-devops/mlruns/566663056383740772/95b6b8389dc24798b84360e61b67404d/artifacts
+end_time: 1752390648155
+entry_point_name: ''
+experiment_id: '566663056383740772'
+lifecycle_stage: active
+run_id: 95b6b8389dc24798b84360e61b67404d
+run_name: Register_RandomForest
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752390590704
+status: 3
+tags: []
+user_id: Mebai

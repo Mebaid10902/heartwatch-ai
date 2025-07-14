@@ -1,0 +1,11 @@
+artifact_location: file:///C:/Users/Mebai/Downloads/fastapi-heart-ml-devops/mlruns/566663056383740772/models/m-e83c0d7702724284a8449dfc42f06422/artifacts
+creation_timestamp: 1752318627746
+experiment_id: '566663056383740772'
+last_updated_timestamp: 1752318627746
+lifecycle_stage: active
+model_id: m-e83c0d7702724284a8449dfc42f06422
+model_type: null
+name: model
+source_run_id: 52b6a573d5754252a6460a4a23fc1584
+status: 1
+status_message: null

@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/Mebai/Downloads/fastapi-heart-ml-devops/mlruns/566663056383740772/8982b132cc034d5197b80a9415dceac3/artifacts
+end_time: 1752352440606
+entry_point_name: ''
+experiment_id: '566663056383740772'
+lifecycle_stage: active
+run_id: 8982b132cc034d5197b80a9415dceac3
+run_name: XGB_Tuned
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752352439411
+status: 3
+tags: []
+user_id: Mebai

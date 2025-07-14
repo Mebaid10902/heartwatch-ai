@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/Mebai/Downloads/fastapi-heart-ml-devops/mlruns/566663056383740772/23f2792ce0874b57a21cc42030d23b5e/artifacts
+end_time: 1752319922147
+entry_point_name: ''
+experiment_id: '566663056383740772'
+lifecycle_stage: active
+run_id: 23f2792ce0874b57a21cc42030d23b5e
+run_name: RF_LR_Baselines
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752319920949
+status: 3
+tags: []
+user_id: Mebai

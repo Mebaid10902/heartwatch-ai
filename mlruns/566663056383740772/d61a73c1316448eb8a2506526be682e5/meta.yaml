@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/Mebai/Downloads/fastapi-heart-ml-devops/mlruns/566663056383740772/d61a73c1316448eb8a2506526be682e5/artifacts
+end_time: 1752224154625
+entry_point_name: ''
+experiment_id: '566663056383740772'
+lifecycle_stage: active
+run_id: d61a73c1316448eb8a2506526be682e5
+run_name: LogisticRegression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752224154597
+status: 4
+tags: []
+user_id: Mebai
