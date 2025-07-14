@@ -43,7 +43,7 @@ Then visit http://localhost:8501
 ```bash
 docker run -d -p 8000:8000 --name heart-api heart-app
 ```
-### 3. Run Docker compose file
+### 3. Build Docker compose file
 ```bash
 docker compose up --build
 ```
