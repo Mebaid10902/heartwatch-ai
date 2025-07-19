@@ -1,67 +1,76 @@
-# 💓 Heart Disease Prediction App (FastAPI + Streamlit + ML)
+# 💓 Heart Disease Risk Prediction & LLM Advice System
 
-A full-stack machine learning web app for predicting heart disease using FastAPI (backend) and Streamlit (frontend). Includes feedback collection, retraining functionality, JWT-based auth, and Docker support.
-
-## 📦 Features
-
-- 🧠 Machine Learning with Scikit-learn, XGBoost
-- 🩺 API prediction endpoint (`/predict`) with JWT auth
-- ✍️ Feedback submission stored in SQLite
-- 🔁 Retraining API (`/retrain`)
-- 🔐 Login using JWT auth
-- 📊 Streamlit frontend for prediction and feedback
-- 🐳 Dockerized (FastAPI & Streamlit)
+An end-to-end **machine learning backend system** built with **FastAPI**, featuring heart disease prediction, **LLM-powered medical recommendations**, user feedback collection, retraining pipeline, and **secure JWT-authenticated APIs**. Supports optional frontend with Streamlit and full Docker-based deployment.
 
 ---
 
-## 🚀 How to Run (Locally)
+## ⚙️ Features
 
-### 1. Backend (Model training && FastApi)
+- 🧠 **ML Models:** Trained using Scikit-learn, XGBoost with automatic versioning
+- 🔐 **JWT Auth:** Secure login and token-based access to prediction & feedback APIs
+- 📈 **/predict API:** Predicts heart disease from patient features
+- 📝 **/feedback API:** Collects user-labeled data for retraining
+- 🔁 **/retrain API:** On-demand retraining of models with persisted updates
+- 💬 **/advise API:** Uses an **LLM** (e.g. Hugging Face model) to generate personalized lifestyle advice
+- 🗄️ **SQLite** as the storage layer for feedback data
+- 🧪 Includes **unit tests with Pytest**
+- 🐳 Dockerized for production-readiness
+- 🎨 Optional **Streamlit** frontend for manual input & visualization
+
+---
+
+## 🚀 Quickstart (Local Development)
+
+### ✅ 1. Train the initial ML model
 ```bash
-python -m ml.train_model    
-```
-```bash
+python -m ml.train_model
+✅ 2. Start the FastAPI Backend
+bash
+Copy
+Edit
 uvicorn app.main:app --reload
-```
-visit http://localhost:8000/docs
+Visit Swagger docs: http://localhost:8000/docs
 
-### 2. Frontend (Streamlit)
-```bash
+🌐 API Overview
+Endpoint	Method	Description	Auth
+/login	POST	Get JWT token	❌
+/predict	POST	Predict heart disease	✅
+/advise	POST	Generate LLM-based lifestyle advice	✅
+/feedback	POST	Submit patient data + true label	✅
+/retrain	POST	Trigger retraining from feedback	✅
+
+📊 Optional: Run Streamlit Frontend
+bash
+Copy
+Edit
 streamlit run streamlit_app/streamlit_app.py
-```
-Then visit http://localhost:8501
----
+Then open: http://localhost:8501
 
-## 🐳 Run with Docker (Recommended)
-
-### 1. Build containers
-```bash
- docker buildx build -t heart-app .
-```
-
-### 3. Run containers
-```bash
-docker run -d -p 8000:8000 --name heart-api heart-app
-```
-### 3. Build Docker compose file
-```bash
+🐳 Docker Setup (Recommended)
+🛠️ 1. Build Docker container
+bash
+Copy
+Edit
+docker build -t heartwatch-api .
+▶️ 2. Run backend container
+bash
+Copy
+Edit
+docker run -d -p 8000:8000 --name heart-api heartwatch-api
+🧩 3. With Docker Compose (API + Streamlit)
+bash
+Copy
+Edit
 docker compose up --build
-```
-
-
 Then visit: http://localhost:8501
 
-## 🧪 Run Pytest
-```bash
-$env:PYTHONPATH = "."
+🧪 Run Pytest (Unit Tests)
+bash
+Copy
+Edit
+$env:PYTHONPATH = "."   # On Windows PowerShell
 pytest tests/test_api.py
+🔐 Sample Credentials
+Username: admin
 
-```
-
----
-
-## ✅ Sample Users
-- username: `admin`
-- password: `password123`
-
----
+Password: password123
