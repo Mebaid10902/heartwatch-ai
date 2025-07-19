@@ -15,5 +15,6 @@ app.include_router(auth.router)      # ✅ JWT + Basic auth routes
 app.include_router(predict.router)   # 🧠 prediction
 app.include_router(feedback.router)  # 💬 feedback
 app.include_router(train.router)     # 🧠 train
+app.include_router(advise.router)     # 🧠 advise
 if __name__ == "__main__":
     uvicorn.run("app.main:app", reload=True)
