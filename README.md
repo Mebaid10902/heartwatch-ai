@@ -26,8 +26,6 @@ An end-to-end **machine learning backend system** built with **FastAPI**, featur
 python -m ml.train_model
 ✅ 2. Start the FastAPI Backend
 bash
-Copy
-Edit
 uvicorn app.main:app --reload
 Visit Swagger docs: http://localhost:8000/docs
 
@@ -41,36 +39,26 @@ Endpoint	Method	Description	Auth
 
 📊 Optional: Run Streamlit Frontend
 bash
-Copy
-Edit
 streamlit run streamlit_app/streamlit_app.py
 Then open: http://localhost:8501
 
 🐳 Docker Setup (Recommended)
 🛠️ 1. Build Docker container
 bash
-Copy
-Edit
 docker build -t heartwatch-api .
 ▶️ 2. Run backend container
 bash
-Copy
-Edit
+
 docker run -d -p 8000:8000 --name heart-api heartwatch-api
 🧩 3. With Docker Compose (API + Streamlit)
 bash
-Copy
-Edit
 docker compose up --build
 Then visit: http://localhost:8501
 
 🧪 Run Pytest (Unit Tests)
 bash
-Copy
-Edit
 $env:PYTHONPATH = "."   # On Windows PowerShell
 pytest tests/test_api.py
 🔐 Sample Credentials
 Username: admin
-
 Password: password123
