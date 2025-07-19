@@ -99,13 +99,28 @@ if st.session_state.page == "predict":
         data = encode_input(form)
         headers = {"Authorization": f"Bearer {st.session_state.token}"}
         try:
+            # 🎯 Step 1: Predict
             res = requests.post(f"{API_URL}/predict", json=data, headers=headers)
             if res.status_code == 200:
                 result = res.json()
+                predicted_class = result["predicted_class"]
                 st.success(f"🎯 Prediction: {result['prediction']}")
-                st.info(f"🔢 Predicted class: {result['predicted_class']}")
+                st.info(f"🔢 Predicted class: {predicted_class}")
+
+                # 💡 Step 2: Get LLM Advice
+                advice_payload = {
+                    "prediction": str(predicted_class),
+                    "patient_data": data,
+                }
+                advice_res = requests.post(f"{API_URL}/advise", json=advice_payload, headers=headers)
+                if advice_res.status_code == 200:
+                    advice = advice_res.json()["advice"]
+                    st.markdown("🧠 **LLM Medical Advice:**")
+                    st.success(advice)
+                else:
+                    st.warning("⚠️ Advice could not be retrieved.")
             else:
-                st.error(f"❌ API Error: {res.status_code}")
+                st.error(f"❌ Prediction API Error: {res.status_code}")
         except Exception as e:
             st.error(f"🔌 Connection Error: {e}")
 
